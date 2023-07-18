@@ -1,0 +1,54 @@
+<ion-header>
+  <!-- ... Header code ... -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="header">
+    <h1>Account Settings</h1>
+  </div>
+
+  <div class="account-info">
+    <h2>Account Information</h2>
+    <ion-item>
+      <ion-label>Username</ion-label>
+      <ion-input type="text" value="" ></ion-input>
+    </ion-item>
+    <ion-button class="action-button" expand="block" shape="round" (click)="changeEmail()">Change UserName</ion-button>
+  </div>
+
+  <div class="change-password">
+    <h2>Change Password</h2>
+    <ion-item>
+      <ion-label>Current Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>New Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Confirm New Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-button class="action-button" expand="block" shape="round" (click)="changePassword()">Change Password</ion-button>
+  </div>
+
+  <div class="change-email">
+    <h2>Change Email</h2>
+    <ion-item>
+      <ion-label>New Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-button class="action-button" expand="block" shape="round" (click)="changeEmail()">Change Email</ion-button>
+  </div>
+
+</ion-content>

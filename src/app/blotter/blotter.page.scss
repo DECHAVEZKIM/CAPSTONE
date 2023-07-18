@@ -1,0 +1,71 @@
+ion-toolbar {
+    --background: #fffbfe;
+}
+
+ion-content {
+    --background: #fffbfe;
+    padding: 100%;
+}
+
+    #header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        h1 {
+            font-weight: 700;
+            font-size: 26px;
+            color: #010100;
+            margin-bottom: 15%;
+        }
+
+    .form {
+        margin-top: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+        ion-input{
+            margin-top: 25px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .Log1{
+        margin-top: 35px;
+        height: 48px;
+        font-size: 18px;
+        text-transform: initial;
+        border-radius: 50px;
+        box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);
+        --box-shadow: none;
+        --background: #50C878;
+    }
+ion-icon{
+    color: #50C878;
+}
+
+p{
+    text-align: center;
+    color: #b6b6b6;
+    margin-top: 40px;
+}
+.message{
+    position: relative;
+    left: 25px;
+}
+
+.uname {
+    position: relative;
+}
+
+.ename {
+    position: relative;
+}
+
+.epass {
+    position: relative;
+}
+
+.vpass {
+    position: relative;
+}

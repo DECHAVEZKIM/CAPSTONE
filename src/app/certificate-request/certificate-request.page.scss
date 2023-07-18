@@ -1,0 +1,174 @@
+/* certificate-request.page.scss */
+ion-content {
+    --ion-padding: 20px;
+    width: 400px;
+    height: 700px;
+  }
+
+  .big-square-button {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    position: relative;
+    top: -15px;
+    left: 180px;
+  }
+    .big-square-button1 {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 36px;
+        position: relative;
+        top: 125px;
+        left: 55px;
+    }
+        .big-square-button2 {
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            position: relative;
+            top: 265px;
+            left: -70px;
+    ion-icon {
+      font-size: 60px;
+    }
+  }
+  .top-section{
+    min-height: 450px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    background: rgb(0,85,138);
+    padding-bottom: 27px;
+    position:static;
+    .top-menu{
+      display: flex;
+      justify-content: space-between;
+      padding-top: 10px;
+      margin-top: 30px;
+    }
+  }
+ion-card{
+    position: absolute;
+    top: 300px;
+    height: 450px;
+    width: 325px;
+    border-top-left-radius: 150px;
+    box-shadow: 0 0 7px 0px rgb(0,85,138);
+} 
+.custom-button {
+    --background: #0086ff; /* Replace with your desired color */
+    --color: #ffffff;
+    --padding: 10px 20px;
+    --border-radius: 60px;
+    font-family: 'Hammersmith One', sans-serif; /* If you want to use the custom font */
+  }
+.custom-button1 {
+    --background: #00d7ff; /* Replace with your desired color */
+    --color: #ffffff;
+    --padding: 10px 20px;
+    --border-radius: 60px;
+    font-family: 'Hammersmith One', sans-serif; /* If you want to use the custom font */
+  }
+.custom-button2 {
+    --background: #0086ff; /* Replace with your desired color */
+    --color: #ffffff;
+    --padding: 10px 20px;
+    --border-radius: 60px;
+    font-family: 'Hammersmith One', sans-serif; /* If you want to use the custom font */
+  }
+  .fonttitletop{
+    font-family: 'Hammersmith One';
+    font-size: 37px;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    text-shadow: 2px 0px 3px #000000;
+    top: 50px;
+    width: 340px;
+    height: 45px;
+}
+.fonttitletop2{
+    font-family: 'Hammersmith One';
+    font-size: 17px;
+    color: #ffffff;
+    position: relative;
+    top: 130px;
+    text-align: right;
+    height: 45px;
+    position: relative;
+}
+.fonttitletop3{
+    font-family: 'Roboto';
+    font-size: 17px;
+    color: #0086ff;
+    position: relative;
+    top: 30px;
+    text-align: left;
+    position: relative;
+
+}
+
+.fonttitletop4{
+    font-family: 'Roboto';
+    font-size: 17px;
+    color: #0086ff;
+    position: relative;
+    text-align: left;
+    height: 45px;
+    top: 20px;
+    position: relative;
+}
+
+.fonttitletop5{
+    font-family: 'Roboto';
+    font-size: 17px;
+    color: #0086ff;
+    position: relative;
+    text-align: right;
+    top: -60px;
+    position: relative;
+}
+.label1{
+    font-family: 'Hammersmith One';
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    position: absolute; 
+    left: 50px;
+    text-align: center;
+    width: 100px;
+    top: 65px;
+}
+.label2{
+    font-family: 'Hammersmith One';
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    position: absolute; 
+    left: 50px;
+    text-align: center;
+    width: 100px;
+    top: 205px;
+}
+.label3{
+    font-family: 'Hammersmith One';
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+    position: absolute; 
+    left: 50px;
+    text-align: center;
+    width: 100px;
+    top: 345px;
+}
+
+
+

@@ -1,0 +1,84 @@
+<link href='https://fonts.googleapis.com/css?family=Hammersmith One' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<ion-content>
+<swiper-container
+  #swiper
+  (afterinit)="swiperReady()"
+  (slidechange)="swiperSlideChanged($event)"
+  [loop]="true"
+  [pagination]="true">
+  <swiper-slide>
+    <div class="top-menu"></div>
+    <div class="onboard-main">
+      <div class="onboard-top">
+          <ion-buttons slot="start">
+            <ion-button class="Skip" [routerLink]="['/register']" fill="clear"> <ion-label class="Skipfont">
+              Skip</ion-label>
+            </ion-button>
+          </ion-buttons>
+          <ion-icon [routerLink]="['/login']" class="Back" slot = "icon-only" name = "arrow-back"></ion-icon>
+      </div>
+      <div class="onboard-bot">
+        <div class="onb-card">
+          <div class="onb-img">
+            <img class="image1" [src]="images" alt="">
+        </div>
+        <div class="onb-desc ion-text-center">
+          <h4 class="ion-text-capitalize ion-no margin">Welcome</h4>
+          <p class="ion-no-margin">
+            {{desc}}
+          </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </swiper-slide>
+  <swiper-slide> 
+    <div class="top-menu1"></div>
+    <div class="onboard-main1">
+      <div class="onboard-top1">
+          <ion-buttons slot="start">
+            <ion-button class="Skip" [routerLink]="['/register']" fill="clear"> <ion-label class="Skipfont">
+              Skip</ion-label>
+            </ion-button>
+          </ion-buttons>
+          
+      </div>
+      <div class="onboard-bot1">
+        <div class="onb-card1">
+          <div class="onb-img1">
+            <img class="img2" [src]="images2" alt="">
+        </div>
+        <div class="onb-desc ion-text-center1">
+          <h6 class="ion-text-capitalize ion-no margin1">Friendly-User</h6>
+          <p class="para1">
+            {{desc2}}
+          </p>
+        </div>
+        </div>
+      </div>
+    </div>
+</swiper-slide>
+  <swiper-slide>
+    <div class="top-menu2"></div>
+    <div class="onboard-main2">
+      <div class="onboard-top2">
+      </div>
+      <div class="onboard-bot2">
+        <div class="onb-card2">
+          <div class="onb-img2">
+            <img class="img3" [src]="images3" alt="">
+        </div>
+        <div class="onb-desc ion-text-center2">
+          <h1 class="ion-text-capitalize ion-no margin2">Register Now!</h1>
+          <p class="para2">
+            {{desc3}}
+          </p>
+          <ion-button class="SuccessBut" [routerLink]="['/register']" color="success">Register</ion-button>
+        </div>
+        </div>
+      </div>
+    </div>
+</swiper-slide>
+</swiper-container> 
+</ion-content>

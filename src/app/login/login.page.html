@@ -1,0 +1,51 @@
+<link href='https://fonts.googleapis.com/css?family=Hammersmith One' rel='stylesheet'>
+<ion-header>
+</ion-header>
+<ion-content>
+  <div id="header">
+  <div class="flex-center">
+    <form [formGroup]="form">
+      <ion-card-title class="fonttitletop">Barangay Poblacion</ion-card-title>
+      <ion-card-title class="fonttitletop2">Registration</ion-card-title>
+      <ion-card-title class="fonttitletop3">Barangay Registration Application <br>of San Pascual is to provide an <br>online way of registering within <br>the Barangay Poblacion San Pascual</ion-card-title>
+     <ion-card>
+      <ion-card-header>
+        <ion-card-title class="fonttitle">Login</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list class="bg-transparent">
+        <ion-item class="itemborder">
+          <ion-label position="floating" class="fontemail">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        </ion-list>
+        <ion-label color="danger" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['email']">Email is invalid</ion-label>
+        <ion-label color="danger" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['required']">Email Required</ion-label>
+        <ion-list class="bg-transparent">
+          <ion-item class="itemborder">
+        <ion-label position="floating" class="fontpassword" >Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item> 
+      <ion-label color="danger" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">Password Required</ion-label>
+      </ion-list>
+      <ion-button color="dark" fill="clear" size="full" [disabled]="!form.get('email')?.valid" (click)="forgotEmailPassword()" id="recoverPasswordButton">Forgot email/password</ion-button>
+      <ion-button color="success" size="full" [disabled]="!form.valid" (click)="login()" id="loginButton">Login</ion-button>
+      <ion-button class="register" fill="clear" position="floating" size="full" [routerLink]="['/swipe']">Register</ion-button>
+      </ion-card-content>
+    </ion-card>
+    </form>
+    <ion-img class="residentsimage"
+      src="/assets/img/residents.png"
+    ></ion-img>
+    <ion-card-title class="fontbottom">Be a <br>resident</ion-card-title>
+    <ion-img class="residentsimage2"
+      src="/assets/img/certificate.png"
+    ></ion-img>
+    <ion-card-title class="fontbottom2">Certification<br> Request</ion-card-title>
+    <ion-img class="residentsimage3"
+    src="/assets/img/online.png"
+  ></ion-img>
+  <ion-card-title class="fontbottom3">Mobile<br> Transaction</ion-card-title>
+  </div>
+</div>
+</ion-content>

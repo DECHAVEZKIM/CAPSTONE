@@ -1,0 +1,278 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot = "start">
+      <ion-buttons color = "primary">
+        <ion-icon [routerLink]="['/swipe']" slot = "icon-only" name = "arrow-back"></ion-icon>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-buttons slot = "end">
+      <ion-button [routerLink]="['/login']">Login</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="header">
+    <h1>Sign Up!</h1>
+  </div>
+
+  
+  <h2>Account Information</h2>
+
+  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <ion-item [class.error-item]="name.touched && name.invalid">
+      <ion-label position="floating">UserName</ion-label>
+      <ion-input type="text" formControlName="name" required></ion-input>
+    </ion-item>
+    <ion-label class="error-label" *ngIf="name.touched && name.invalid" stacked>
+      UserName is required
+    </ion-label>
+
+    <ion-item [class.error-item]="email.touched && email.invalid">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" formControlName="email" required></ion-input>
+    </ion-item>
+
+    <ion-label class="error-label" *ngIf="email.touched && email.invalid" stacked>
+      Please enter a valid email
+    </ion-label>
+
+    <ion-item [class.error-item]="password.touched && password.invalid">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+    </ion-item>
+
+    <ion-label class="error-label" *ngIf="password.touched && password.errors?.['required']" stacked>
+      Password is required
+    </ion-label>
+
+    <ion-label class="error-label" *ngIf="password.touched && password.errors?.['minlength']" stacked>
+      Minimum 6 characters are required for the password
+    </ion-label>
+
+    <ion-item [class.error-item]="repeatPassword.touched && repeatPassword.invalid">
+      <ion-label position="floating">Repeat Password</ion-label>
+      <ion-input type="password" formControlName="repeatPassword" required></ion-input>
+    </ion-item>
+
+    <ion-label class="error-label" *ngIf="repeatPassword.touched && repeatPassword.invalid" stacked>
+      Please repeat the password
+    </ion-label>
+
+  <div class="Middle-bar">
+  <h3>Resident's Information</h3>
+  </div>
+
+  <ion-item [class.error-item]="firstName.touched && firstName.invalid">
+    <ion-label position="floating">First Name</ion-label>
+    <ion-input type="text" formControlName="firstName" required></ion-input>
+  </ion-item>
+
+  <ion-label class="error-label" *ngIf="firstName.touched && firstName.invalid" stacked>
+    First Name is required
+  </ion-label>
+
+  <ion-item [class.error-item]="lastName.touched && lastName.invalid">
+    <ion-label position="floating">Last Name</ion-label>
+    <ion-input type="text" formControlName="lastName" required></ion-input>
+  </ion-item>
+
+  <ion-label class="error-label" *ngIf="lastName.touched && lastName.invalid" stacked>
+    Last Name is required
+  </ion-label>
+
+  <ion-item [class.error-item]="familyposition.touched && familyposition.invalid">
+    <ion-label position="floating">Family Position</ion-label>
+    <ion-input type="text" formControlName="familyposition" required></ion-input>
+  </ion-item>
+
+  <ion-label class="error-label" *ngIf="familyposition.touched && familyposition.invalid" stacked>
+    Family Position is required
+  </ion-label>
+
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-radio-group formControlName="gender" required>
+      <ion-row>
+        <ion-col>
+          <ion-radio value="male"></ion-radio>
+          <ion-label>Male</ion-label>
+        </ion-col>
+        <ion-col>
+          <ion-radio value="female"></ion-radio>
+          <ion-label>Female</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-radio-group>
+  </ion-item>
+
+    <ion-label *ngIf="userForm.get('gender').touched && userForm.get('gender').errors?.['required']" stacked color="danger">
+      Gender is required.
+    </ion-label>
+
+    <ion-item [class.error-item]="age.touched && age.invalid">
+    <ion-label position="floating">Age</ion-label>
+    <ion-input formControlName="age" type="text" inputmode="numeric" required></ion-input>
+    </ion-item>
+
+    <ion-label *ngIf="userForm.get('age').touched && userForm.get('age').errors?.['required']" color="danger">
+      Age is required.
+    </ion-label>
+
+    <ion-label class="error-label" *ngIf="userForm.get('age').touched && userForm.get('age').errors?.['pattern']" color="danger">
+      Please enter a valid number for Age.
+    </ion-label>
+
+    <h2>Birthday</h2>
+ 
+    <ion-datetime
+      formControlName="birthday"
+      displayFormat="YYYY-MM-DD"
+      placeholder="Select your birthday"
+      required
+    ></ion-datetime>
+  
+    <ion-label *ngIf="userForm.controls['birthday'].touched && userForm.controls['birthday'].errors?.['required']" stacked color="danger">
+      Birthday is required.
+    </ion-label>
+
+      <ion-item>
+        <ion-label>Marital Status</ion-label>
+        <ion-select formControlName="maritalStatus">
+          <ion-select-option value="single">Single</ion-select-option>
+          <ion-select-option value="married">Married</ion-select-option>
+          <ion-select-option value="divorced">Divorced</ion-select-option>
+          <ion-select-option value="widowed">Widowed</ion-select-option>
+        </ion-select>
+      </ion-item>
+  
+      <ion-label *ngIf=" userForm.get('maritalStatus').touched && userForm.get('maritalStatus').errors?.['required']" stacked color="danger">
+        Marital Status is required
+      </ion-label>
+
+      <ion-item>
+        <ion-label>Blood Type</ion-label>
+        <ion-input formControlName="bloodType"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Disability</ion-label>
+        <ion-input formControlName="Disability"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Highest Educational Attainment</ion-label>
+        <ion-select formControlName="HighestEducationalAttainment">
+          <ion-select-option value="Elementary">Elementary</ion-select-option>
+          <ion-select-option value="HighSchool">HighSchool</ion-select-option>
+          <ion-select-option value="Senior HighSchool">Senior HighSchool</ion-select-option>
+          <ion-select-option value="College">College</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item [class.error-item]="Occupation.touched && Occupation.invalid">
+        <ion-label position="floating">Occupation</ion-label>
+        <ion-input formControlName="Occupation" type="text" inputmode="numeric" required></ion-input>
+        </ion-item>
+    
+        <ion-label *ngIf="userForm.get('Occupation').touched && userForm.get('Occupation').errors?.['required']" color="danger">
+          Occupation is required.
+        </ion-label>
+    
+        <ion-item [class.error-item]="isSubmitted && contactNumber.touched && contactNumber.invalid">
+          <ion-label position="floating">Contact Number</ion-label>
+          <ion-input formControlName="contactNumber" type="tel"></ion-input>
+        </ion-item>
+    
+        <ion-label *ngIf="userForm.get('contactNumber').touched && userForm.get('contactNumber').errors?.['required']" color="danger">
+          Contact Number is required
+        </ion-label>
+
+
+        <ion-item>
+          <ion-label>Religion</ion-label>
+          <ion-input formControlName="Religion"></ion-input>
+        </ion-item>
+
+        
+  <div class="Middle-bar">
+    <h3>Address Information</h3>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Street</ion-label>
+      <ion-input formControlName="street" type="text" required></ion-input>
+    </ion-item>
+    <ion-label *ngIf="userForm.get('street').touched && userForm.get('street').errors?.['required']"  stacked color="danger">
+      Street is required
+    </ion-label>
+
+    <ion-item>
+      <ion-label position="floating">Barangay</ion-label>
+      <ion-input formControlName="barangay" type="text" required></ion-input>
+    </ion-item>
+    <ion-label *ngIf="userForm.get('barangay').touched && userForm.get('barangay').errors?.['required']" stacked color="danger">
+      Barangay is required
+    </ion-label>
+
+    <ion-item>
+      <ion-label position="floating">Sitio</ion-label>
+      <ion-input formControlName="sitio" type="text" required></ion-input>
+    </ion-item>
+    <ion-label *ngIf="userForm.get('sitio').touched && userForm.get('sitio').errors?.['required']" stacked color="danger">
+      Sitio is required
+    </ion-label>
+
+    <ion-item>
+      <ion-label position="floating">City</ion-label>
+      <ion-input formControlName="city" type="text" required></ion-input>
+    </ion-item>
+    <ion-label *ngIf="userForm.get('city').touched && userForm.get('city').errors?.['required']" stacked color="danger">
+      City is required
+    </ion-label>
+
+    <ion-item>
+      <ion-label position="floating">Zip Code</ion-label>
+      <ion-input formControlName="zipCode" type="text" required></ion-input>
+    </ion-item>
+    <ion-label *ngIf="userForm.get('zipCode').touched && userForm.get('zipCode').errors?.['required']" stacked color="danger">
+      Zip Code is required
+    </ion-label>
+
+    <ion-item>
+      <ion-label position="floating">House Number</ion-label>
+      <ion-input formControlName="houseNumber" type="text" required></ion-input>
+    </ion-item>
+    <ion-label *ngIf="userForm.get('houseNumber').touched && userForm.get('houseNumber').errors?.['required']" stacked color="danger">
+      House Number is required
+    </ion-label>
+
+    <ion-item [class.error-item]="isSubmitted && !userForm.get('userImage').value">
+      <ion-label position="stacked">Image</ion-label>
+      <input
+        type="file"
+        accept="image/*"
+        (change)="onImageSelected($event)"
+        formControlName="userImage"
+        #userImageInput
+      />
+    </ion-item>
+    <ion-label *ngIf="userForm.get('userImage').touched && userForm.get('userImage').errors?.['required']" stacked color="danger">
+      Image is required
+    </ion-label>
+  
+
+    <div class="Bottom-bar">
+      <ion-button
+        class="Log1"
+        expand="block"
+        shape="round"
+        nd="full"
+        type="submit"
+      >
+        Join Us!
+      </ion-button>
+      <p class="para1">By pressing Join Us! you are agreeing to <br> our terms & conditions.</p>
+    </div>
+  </form>
+  </ion-content>

@@ -1,0 +1,58 @@
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3a7ca5;
+    height: 60px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .account-info,
+  .change-password,
+  .change-email {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+  }
+  
+  h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  ion-item {
+    --highlight-height: 0;
+    margin-bottom: 15px;
+  }
+  
+  ion-label {
+    color: #333;
+  }
+  
+  ion-input {
+    --padding-start: 10px;
+    --padding-end: 10px;
+  }
+  
+  .action-button {
+    margin-top: 20px;
+    --background: #3a7ca5;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .action-button:hover {
+    --background: #306b91;
+  }
+  
+  .action-button:active {
+    --background: #285e82;
+  }

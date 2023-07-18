@@ -1,0 +1,91 @@
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="menu-content"> <!-- Add the 'menu-content' class here -->
+    <ion-button routerLink="/admin-panel" class="call">
+      <ion-label class="registercall">Go To Admin<br> Events</ion-label>
+    </ion-button>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Admin</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>User Submissions</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <div class="table-container">
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>UserName</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Name</th>
+              <th>FamilyPosition</th>
+              <th>Gender</th>
+              <th>Age</th>
+              <th>Birthday</th>
+              <th>MaritalStatus</th>
+              <th>BloodType</th>
+              <th>Disability</th>
+              <th>HighestEducationalAttainment</th>
+              <th>Occupation</th>
+              <th>Contact Number</th>
+              <th>Religion</th>
+              <th>Street</th>
+              <th>Barangay</th>
+              <th>Sitio</th>
+              <th>City</th>
+              <th>ZipCode</th>
+              <th>HouseNumber</th>
+              <th>UserImage</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users; let i = index">
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.password }}</td>
+              <td>{{ user.firstName }} {{ user.lastName}}</td>
+              <td>{{ user.familyposition }}</td>
+              <td>{{ user.gender }}</td>
+              <td>{{ user.age }}</td>
+              <td>{{ user.birthday }}</td>
+              <td>{{ user.maritalStatus }}</td>
+              <td>{{ user.bloodType }}</td>
+              <td>{{ user.Disability }}</td>
+              <td>{{ user.HighestEducationalAttainment}}</td>
+              <td>{{ user.Occupation }}</td>
+              <td>{{ user.contactNumber }}</td>
+              <td>{{ user.Religion }}</td>
+              <td>{{ user.street }}</td>
+              <td>{{ user.sitio }}</td>
+              <td>{{ user.city }}</td>
+              <td>{{ user.zipCode }}</td>
+              <td>{{ user.houseNumber }}</td>
+              <td>{{ user.userImage }}</td>
+              <td>
+                <ion-button class="accept-button" (click)="acceptUser(i)">Accept</ion-button>
+                <ion-button class="delete-button" color="danger" (click)="deleteUser(i)">Delete</ion-button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

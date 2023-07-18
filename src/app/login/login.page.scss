@@ -1,0 +1,153 @@
+.flex-center{
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 35%;
+    left: 5%;
+   }
+.font{
+    font-family: 'Hammersmith One';
+    font-size: 30px;
+    font-weight: bold;
+    color: #3a7ca5;
+}
+.register {
+    font-family: 'Hammersmith One';
+    font-size: 17px;
+    color: #3a7ca5;
+    position: relative;
+    margin: 5px;
+}
+.bg-transparent {
+    background-color: transparent;
+}
+.fontemail{
+    font-family: 'Hammersmith One';
+    font-size: 20px;
+    color: #3a7ca5;
+    width: 100%;
+    margin: auto;
+    bottom: 7%;
+    left: 0%;
+    position: relative;
+}
+.fontpassword{
+    font-family: 'Hammersmith One';
+    font-size: 20px;
+    color: #3a7ca5;
+    width: 100%;
+    margin: auto;
+    bottom: 7%;
+    left: 0%;
+    position: relative;
+}
+ion-card {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    border-radius: 10px;
+}
+.fonttitle{
+    font-family: 'Hammersmith One';
+    font-size: 30px;
+    font-weight: bold;
+    color: #3a7ca5;
+}
+.itemborder{
+    border-radius: 10px;
+}
+#header {
+    height: 50%;
+    background: #3a7ca5;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/img/BackgroundImage.jpg') no-repeat center center / cover;
+}
+.fonttitletop{
+    font-family: 'Hammersmith One';
+    font-size: 37px;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    text-shadow: 2px 0px 3px #000000;
+    bottom: 20px;
+    background: #3a7ca5;
+    width: 340px;
+    height: 45px;
+}
+.fonttitletop2{
+    font-family: 'Hammersmith One';
+    font-size: 37px;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+    text-shadow: 2px 0px 3px #000000;
+    bottom: 20px;
+}
+.residentsimage {
+    height:50px;
+    width: 50px;
+    position: relative;
+    left: 45px;
+    top: 10px;
+    margin-top: 5px;
+}
+.fontbottom{
+    font-family: 'Hammersmith One';
+    font-size: 15px;
+    color: #3a7ca5;
+    position: absolute;
+    margin-top: 10px;
+    left: 40px;
+    text-align: center;
+    bottom: 8%;
+}
+.residentsimage2 {
+    height:50px;
+    width: 50px;
+    position: relative;
+    left: 153px;
+    bottom: 40px;
+    margin-top: 5px;
+}
+.fontbottom2{
+    font-family: 'Hammersmith One';
+    font-size: 15px;
+    color: #3a7ca5;
+    position: absolute;
+    margin-top: 10px;
+    left: 136px;
+    bottom: 58px;
+    text-align: center;
+}
+.fonttitletop3{
+    font-family: 'Hammersmith One';
+    font-size: 14px;
+    color: #ffffff;
+    position: relative;
+    bottom: 10px;
+    text-align: justify;
+    text-shadow: 1px 1px 0px #000000;
+    background:linear-gradient(180deg, rgba(13,88,115,0.3) 0%, rgba(13,88,115,0.3) 100%);
+    width: 250px;
+}
+.residentsimage3 {
+    height:50px;
+    width: 50px;
+    position: relative;
+    left: 265px;
+    bottom: 102px;
+    margin-top: 5px;
+}
+.fontbottom3{
+    font-family: 'Hammersmith One';
+    font-size: 15px;
+    color: #3a7ca5;
+    position: absolute;
+    margin-top: 10px;
+    left: 248px;
+    bottom: 60px;
+    text-align: center;
+}
