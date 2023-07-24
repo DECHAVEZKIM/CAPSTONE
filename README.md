@@ -12,3 +12,7 @@ This includes codes such as swiper.js a new method of swiping in ionic 7 since t
 This also include loading components within the login so it will require the installation of ngrx modules together with the swiper modules
 
 There is also an admin page wherein the request of registration are sent and can modify events and send events within the view-event tab happy coding :)
+
+npm install @ngrx/store --save must also be installed
+npm install @ngrx/store-devtools must be installed
+npm install swiper@latest must also be installed
